@@ -32,9 +32,9 @@ def help(bot, update):
 def button(bot, update):
     query = update.callback_query
     if query.data == "1":
-        text = "You can choose any of the following actions: +, -, /, *"
+        text = "Ssup buddy"
     elif query.data == "2":
-        text = "3+4, 44-12, 43/2, 12*90"
+        text = "/dolintenge 10"
     bot.editMessageText(text=text, chat_id=query.message.chat_id,
                         message_id=query.message.message_id)
 
