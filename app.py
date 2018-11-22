@@ -42,7 +42,7 @@ def button(bot, update):
 def dolintenge(bot, update, args):
     dollars = int(args)
     tenge = dollars * 370
-    update.message.reply_text(chat_id=query.message.chat_id, text=tenge)
+    update.message.reply_text(chat_id=query.message.chat_id, text=dollars)
 
 
 def error(bot, update, error):
