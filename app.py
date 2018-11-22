@@ -63,7 +63,7 @@ def setup():
     dp.add_error_handler(error)
     bot.set_webhook()  # Delete webhook
     updater.start_polling()  # Start the Bot
-    """Run the bot until you press Ctrl-C or the process receives SIGINT,
+    """Run the bot until you press Ctrl-C  or the process receives SIGINT,
     SIGTERM or SIGABRT. This should be used most of the time, since
     start_polling() is non-blocking and will stop the bot gracefully."""
     updater.idle()
