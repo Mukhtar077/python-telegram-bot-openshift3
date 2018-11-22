@@ -42,7 +42,7 @@ def button(bot, update):
 def dolintenge(bot, update, args):
     dollars = int(args)
     tenge = dollars * 370
-    update.message.reply_text(text=tenge)
+    update.message.reply_text(chat_id=query.message.chat_id, text=tenge)
 
 
 def error(bot, update, error):
@@ -56,7 +56,7 @@ def setup():
     dp = updater.dispatcher  # Get the dispatcher to register handlers
     dp.add_handler(CommandHandler("start", start))  # on /start command answer in Telegram
     dp.add_handler(CommandHandler("help", help))  # on /help command answer in Telegram
-    dp.add_handler(CommandHandler("dolintenge", dolintenge))
+    dp.add_handler(CommandHandler("dolintenge", dolintenge, pass_args=True))
     dp.add_handler(CallbackQueryHandler(button))
 
     # log all errors
